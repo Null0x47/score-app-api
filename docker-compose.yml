@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  score-app-api:
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+       - ./db/score_app.db:/app/db/score_app.db
