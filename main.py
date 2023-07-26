@@ -222,7 +222,7 @@ def get_scores():
     conn = create_connection("db/score_app.db")
     conn.row_factory = sqlite3.Row
     cur = conn.cursor()
-    res = cur.execute("SELECT * FROM scores")
+    res = cur.execute("SELECT * FROM scores ORDER BY score DESC")
 
     return {"scores": res.fetchall()}
 
