@@ -19,8 +19,7 @@ def create_connection(db_file):
         if conn:
             conn.close()
 
-# NOTE: In case you run things locally, make sure the frontend runs on port 9000
-origins = ["http://localhost:9000"]
+origins = ["*"]
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
